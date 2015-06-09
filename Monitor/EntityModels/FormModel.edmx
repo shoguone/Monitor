@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FormModel.Store" Alias="Self" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="FormModelStoreContainer">
+          <EntitySet Name="kom" EntityType="FormModel.Store.kom" store:Type="Tables" Schema="Firebird" />
+        </EntityContainer>
+        <EntityType Name="kom">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="N_KOM" Type="varchar" MaxLength="7" />
+          <Property Name="V_VS" Type="varchar" MaxLength="12" />
+          <Property Name="N_E" Type="varchar" MaxLength="20" />
+          <Property Name="ST" Type="varchar" MaxLength="20" />
+          <Property Name="V_CH" Type="varchar" MaxLength="30" />
+          <Property Name="REZH_KOM" Type="varchar" MaxLength="20" />
+          <Property Name="D_OTPR" Type="date" />
+          <Property Name="V_SHET" Type="varchar" MaxLength="30" />
+          <Property Name="VSEGO" Type="int" />
+          <Property Name="VA" Type="int" />
+          <Property Name="MTLB" Type="int" />
+          <Property Name="SUD" Type="int" />
+          <Property Name="Z_PREDS" Type="varchar" MaxLength="20" />
+          <Property Name="PREDS" Type="varchar" MaxLength="20" />
+          <Property Name="S_UD" Type="varchar" MaxLength="7" />
+          <Property Name="N_UD" Type="varchar" MaxLength="12" />
+          <Property Name="VIDAN" Type="varchar" MaxLength="30" />
+          <Property Name="D_VID" Type="date" />
+          <Property Name="PRIM" Type="clob" />
+          <Property Name="SPEC" Type="varchar" MaxLength="12" />
+          <Property Name="VUS1" Type="varchar" MaxLength="7" />
+          <Property Name="VUS2" Type="varchar" MaxLength="7" />
+          <Property Name="VUS3" Type="varchar" MaxLength="7" />
+          <Property Name="PR" Type="int" />
+          <Property Name="D_PR" Type="date" />
+          <Property Name="RAILROAD" Type="varchar" MaxLength="30" />
+          <Property Name="V_OKRUG" Type="varchar" MaxLength="30" />
+          <Property Name="FL_UB" Type="int" />
+          <Property Name="FL_PEREOD" Type="int" />
+          <Property Name="NARAD" Type="int" />
+          <Property Name="GOROD" Type="varchar" MaxLength="100" />
+          <Property Name="STREET" Type="varchar" MaxLength="255" />
+          <Property Name="PHONE" Type="varchar" MaxLength="30" />
+          <Property Name="ZIP" Type="varchar" MaxLength="10" />
+          <Property Name="ISSIBVO" Type="int" />
+          <Property Name="DOLJNOST" Type="varchar" MaxLength="255" />
+          <Property Name="FOLLOW_OFICER" Type="smallint" />
+          <Property Name="FOLLOW_PRAPOR" Type="smallint" />
+          <Property Name="FOLLOW_SOLDERS" Type="smallint" />
+          <Property Name="NVESHAT" Type="varchar" MaxLength="12" />
+          <Property Name="DVESHAT" Type="date" />
+          <Property Name="KOLSUHPAY" Type="smallint" />
+          <Property Name="SYST" Type="smallint" Nullable="false" />
+          <Property Name="POEZD" Type="varchar" MaxLength="6" />
+          <Property Name="VID_TR" Type="varchar" MaxLength="12" />
+          <Property Name="T_OTPR" Type="varchar" MaxLength="6" />
+          <Property Name="N_DOV" Type="varchar" MaxLength="20" />
+          <Property Name="D_DOV" Type="date" />
+          <Property Name="FL_DISPLAY" Type="int" Nullable="false" />
+          <Property Name="DOPUSK" Type="int" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FormModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EntityContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="kom" EntityType="FormModel.kom" />
+        </EntityContainer>
+        <EntityType Name="kom">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="N_KOM" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="V_VS" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="N_E" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ST" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="V_CH" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="REZH_KOM" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="D_OTPR" Type="DateTime" />
+          <Property Name="V_SHET" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="VSEGO" Type="Int32" />
+          <Property Name="VA" Type="Int32" />
+          <Property Name="MTLB" Type="Int32" />
+          <Property Name="SUD" Type="Int32" />
+          <Property Name="Z_PREDS" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="PREDS" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="S_UD" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="N_UD" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="VIDAN" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="D_VID" Type="DateTime" />
+          <Property Name="PRIM" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SPEC" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="VUS1" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="VUS2" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="VUS3" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="PR" Type="Int32" />
+          <Property Name="D_PR" Type="DateTime" />
+          <Property Name="RAILROAD" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="V_OKRUG" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="FL_UB" Type="Int32" />
+          <Property Name="FL_PEREOD" Type="Int32" />
+          <Property Name="NARAD" Type="Int32" />
+          <Property Name="GOROD" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="STREET" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="PHONE" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ZIP" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="ISSIBVO" Type="Int32" />
+          <Property Name="DOLJNOST" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FOLLOW_OFICER" Type="Int16" />
+          <Property Name="FOLLOW_PRAPOR" Type="Int16" />
+          <Property Name="FOLLOW_SOLDERS" Type="Int16" />
+          <Property Name="NVESHAT" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="DVESHAT" Type="DateTime" />
+          <Property Name="KOLSUHPAY" Type="Int16" />
+          <Property Name="SYST" Type="Int16" Nullable="false" />
+          <Property Name="POEZD" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="VID_TR" Type="String" MaxLength="12" Unicode="true" FixedLength="false" />
+          <Property Name="T_OTPR" Type="String" MaxLength="6" Unicode="true" FixedLength="false" />
+          <Property Name="N_DOV" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="D_DOV" Type="DateTime" />
+          <Property Name="FL_DISPLAY" Type="Int32" Nullable="false" />
+          <Property Name="DOPUSK" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FormModelStoreContainer" CdmEntityContainer="EntityContext">
+          <EntitySetMapping Name="kom">
+            <EntityTypeMapping TypeName="FormModel.kom">
+              <MappingFragment StoreEntitySet="kom">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="N_KOM" ColumnName="N_KOM" />
+                <ScalarProperty Name="V_VS" ColumnName="V_VS" />
+                <ScalarProperty Name="N_E" ColumnName="N_E" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="V_CH" ColumnName="V_CH" />
+                <ScalarProperty Name="REZH_KOM" ColumnName="REZH_KOM" />
+                <ScalarProperty Name="D_OTPR" ColumnName="D_OTPR" />
+                <ScalarProperty Name="V_SHET" ColumnName="V_SHET" />
+                <ScalarProperty Name="VSEGO" ColumnName="VSEGO" />
+                <ScalarProperty Name="VA" ColumnName="VA" />
+                <ScalarProperty Name="MTLB" ColumnName="MTLB" />
+                <ScalarProperty Name="SUD" ColumnName="SUD" />
+                <ScalarProperty Name="Z_PREDS" ColumnName="Z_PREDS" />
+                <ScalarProperty Name="PREDS" ColumnName="PREDS" />
+                <ScalarProperty Name="S_UD" ColumnName="S_UD" />
+                <ScalarProperty Name="N_UD" ColumnName="N_UD" />
+                <ScalarProperty Name="VIDAN" ColumnName="VIDAN" />
+                <ScalarProperty Name="D_VID" ColumnName="D_VID" />
+                <ScalarProperty Name="PRIM" ColumnName="PRIM" />
+                <ScalarProperty Name="SPEC" ColumnName="SPEC" />
+                <ScalarProperty Name="VUS1" ColumnName="VUS1" />
+                <ScalarProperty Name="VUS2" ColumnName="VUS2" />
+                <ScalarProperty Name="VUS3" ColumnName="VUS3" />
+                <ScalarProperty Name="PR" ColumnName="PR" />
+                <ScalarProperty Name="D_PR" ColumnName="D_PR" />
+                <ScalarProperty Name="RAILROAD" ColumnName="RAILROAD" />
+                <ScalarProperty Name="V_OKRUG" ColumnName="V_OKRUG" />
+                <ScalarProperty Name="FL_UB" ColumnName="FL_UB" />
+                <ScalarProperty Name="FL_PEREOD" ColumnName="FL_PEREOD" />
+                <ScalarProperty Name="NARAD" ColumnName="NARAD" />
+                <ScalarProperty Name="GOROD" ColumnName="GOROD" />
+                <ScalarProperty Name="STREET" ColumnName="STREET" />
+                <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="ISSIBVO" ColumnName="ISSIBVO" />
+                <ScalarProperty Name="DOLJNOST" ColumnName="DOLJNOST" />
+                <ScalarProperty Name="FOLLOW_OFICER" ColumnName="FOLLOW_OFICER" />
+                <ScalarProperty Name="FOLLOW_PRAPOR" ColumnName="FOLLOW_PRAPOR" />
+                <ScalarProperty Name="FOLLOW_SOLDERS" ColumnName="FOLLOW_SOLDERS" />
+                <ScalarProperty Name="NVESHAT" ColumnName="NVESHAT" />
+                <ScalarProperty Name="DVESHAT" ColumnName="DVESHAT" />
+                <ScalarProperty Name="KOLSUHPAY" ColumnName="KOLSUHPAY" />
+                <ScalarProperty Name="SYST" ColumnName="SYST" />
+                <ScalarProperty Name="POEZD" ColumnName="POEZD" />
+                <ScalarProperty Name="VID_TR" ColumnName="VID_TR" />
+                <ScalarProperty Name="T_OTPR" ColumnName="T_OTPR" />
+                <ScalarProperty Name="N_DOV" ColumnName="N_DOV" />
+                <ScalarProperty Name="D_DOV" ColumnName="D_DOV" />
+                <ScalarProperty Name="FL_DISPLAY" ColumnName="FL_DISPLAY" />
+                <ScalarProperty Name="DOPUSK" ColumnName="DOPUSK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="FormModel" ZoomLevel="81">
+        <EntityTypeShape EntityType="FormModel.kom" Width="1.5" PointX="0.75" PointY="0.75" Height="10.82615234375" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
