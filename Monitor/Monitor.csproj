@@ -76,6 +76,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utility\CrewsComparer.cs" />
+    <Compile Include="Utility\Extensions.cs" />
     <Compile Include="Utility\MonitorCrew.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

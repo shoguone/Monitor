@@ -32,6 +32,8 @@ namespace Monitor
         private delegate void CrewsParameterDelegate(List<MonitorCrew> crews);
         private delegate void KomParameterDelegate(List<kom> data);
 
+        private CrewsComparer comparer = new CrewsComparer();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -130,13 +132,15 @@ namespace Monitor
             }
             if (data.Count > 0)
             {
-                foreach (var kom in data)
+                foreach (kom kom in data)
                 {
-                    crews.Add(new MonitorCrew(kom));
+                    //crews.Add(new MonitorCrew(kom));
+                    crews.AddSorted<MonitorCrew>(new MonitorCrew(kom), comparer);
                 }
-                crews
-                    .OrderBy(c => c.DepartureDate)
-                    .ThenBy(c => c.CrewNumber);
+                
+                //crews
+                //    .OrderBy(c => c.DepartureDate)
+                //    .ThenBy(c => c.CrewNumber);
 
             }
         }

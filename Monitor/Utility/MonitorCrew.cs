@@ -15,7 +15,7 @@ namespace Monitor.Utility
 
         private string _departureDate;
         [DisplayName("Дата отправки")]
-        public string DepartureDate
+        public string DepartureDateString
         {
             get { return _departureDate; }
             set
@@ -23,10 +23,12 @@ namespace Monitor.Utility
                 if (_departureDate != value)
                 {
                     _departureDate = value;
-                    _OnPropertyChanged(this, "DepartureDate");
+                    _OnPropertyChanged(this, "DepartureDateString");
                 }
             }
         }
+
+        public DateTime? DepartureDate;
 
         private string _crewNumber;
         [DisplayName("№ ОСП")]
@@ -258,7 +260,8 @@ namespace Monitor.Utility
 
         public void UpdateWithKom(kom kom)
         {
-            DepartureDate = (kom.D_OTPR ?? DateTime.MinValue).ToString("dd.MM");
+            DepartureDate = kom.D_OTPR;
+            DepartureDateString = (kom.D_OTPR ?? DateTime.MinValue).ToString("dd.MM");
             CrewNumber = kom.N_KOM;
             ForcesType = kom.V_VS;
             District = kom.V_OKRUG;
@@ -275,5 +278,7 @@ namespace Monitor.Utility
             IsSent = !string.IsNullOrEmpty(kom.NVESHAT);
             //IsSent = !string.IsNullOrEmpty(kom.NVESHAT) || (kom.KOLSUHPAY != null && kom.KOLSUHPAY > 0);
         }
+
     }
+
 }

@@ -87,7 +87,7 @@
                 <DataGridTemplateColumn Header="Дата отправки">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding DepartureDate}" />
+                            <TextBlock Text="{Binding DepartureDateString}" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
