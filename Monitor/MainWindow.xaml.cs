@@ -22,6 +22,7 @@ namespace Monitor
         private int minFont = Properties.Settings.Default.GridFontMin;
         private int maxFont = Properties.Settings.Default.GridFontMax;
         private int fontSize = Properties.Settings.Default.GridFont;
+        private int updateIntervalMS = Properties.Settings.Default.UpdateIntervalMS;
 
         public bool IsFullScreen = false;
 
@@ -65,7 +66,7 @@ namespace Monitor
         {
             while (true)
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(updateIntervalMS);
                 Init();
 
             }
@@ -126,8 +127,16 @@ namespace Monitor
                 else
                 {
                     var kom = data.First(d => d.N_KOM == crews[i].CrewNumber);
-                    crews[i].UpdateWithKom(kom);
-                    data.Remove(kom);
+                    if (crews[i].DepartureDate == kom.D_OTPR)
+                    {
+                        crews[i].UpdateWithKom(kom);
+                        data.Remove(kom);
+                    }
+                    else
+                    {
+                        crews.RemoveAt(i);
+                        i--;
+                    }
                 }
             }
             if (data.Count > 0)

@@ -11,5 +11,8 @@
     <Setting Name="GridFontMax" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">56</Value>
     </Setting>
+    <Setting Name="UpdateIntervalMS" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
